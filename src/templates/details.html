@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="">
+<html class="dark" lang="">
 
 <head>
   <meta charset="utf-8" />
@@ -21,36 +21,51 @@
   <meta name="theme-color" content="#000" />
 </head>
 
-<body>
+<body class="dark:bg-gray-900 dark:text-gray-100">
 
   <!-- Start Header -->
   <header class=" w-full z-50 px-4 ">
     <div class="container mx-auto py-10">
       <div class="flex flex-stretch items-center">
-        <div class="w-56 flex items-center">
+        <div class="w-56 flex items-center" data-aos="fade-right" data-aos-duration="500">
           <img src="images/design/logo.svg" alt="Logo">
         </div>
         <div class="w-full"></div>
+
+        <!-- Start Dark Mode -->
+        <div class="flex -bottom-0 items-center space-x-2 md:mr-44 " data-aos="fade-down" data-aos-duration="500">
+          <span class="text-sm text-gray-800 dark:text-gray-100">Light</span>
+          <input type="checkbox" name="" id="toggle" class="hidden ">
+          <label for="toggle">
+            <div class=" w-9 h-5 flex item-center bg-gray-300 rounded-full p-1 cursor-pointer ">
+              <div class=" toggle-dot w-4 h-3 bg-white rounded-full shadow-md transform duration-200 ease-in-out">
+              </div>
+            </div>
+          </label>
+          <span class="text-sm text-black dark:text-gray-100">Dark</span>
+        </div>
+        <!-- End Dark Mode -->
+
         <!-- Start Menu Humburger Wrapper -->
-        <div class="w-auto">
+        <div class="w-auto" data-aos="fade-left" data-aos-duration="1000">
           <ul id="menu" class="fixed bg-white inset-0 flex flex-col invisible items-center 
            justify-center opacity-0 md:visible md:flex-row md:bg-transparent 
            md:relative md:opacity-100 ">
 
             <li class="mx-3 py-6 md:py-0">
-              <a href="" class="text-black  hover:underline">Showcase</a>
+              <a href="" class="text-black  hover:underline dark:text-gray-100 ">Showcase</a>
             </li>
 
             <li class="mx-3 py-6 md:py-0">
-              <a href="" class="text-black  hover:underline">Catalog</a>
+              <a href="" class="text-black  hover:underline dark:text-gray-100 ">Catalog</a>
             </li>
 
             <li class="mx-3 py-6 md:py-0">
-              <a href="" class="text-black  hover:underline">Delivery</a>
+              <a href="" class="text-black  hover:underline dark:text-gray-100 ">Delivery</a>
             </li>
 
             <li class="mx-3 py-6 md:py-0">
-              <a href="" class="text-black  hover:underline">Rewards</a>
+              <a href="" class="text-black  hover:underline dark:text-gray-100 ">Rewards</a>
             </li>
           </ul>
         </div>
@@ -60,8 +75,8 @@
           <ul class="flex items-center">
             <li class="ml-6 block md:hidden">
               <button id="menu-toggler" class="relative flex z-50 items-center 
-              justify-center w-8 h-8 text-black  focus:outline-none">
-                <svg class="fill-current" width="18" height="17" viewBox="0 0 18 17" fill="none"
+              justify-center w-8 h-8 text-black  focus:outline-none" data-aos="fade-down" data-aos-duration="500">
+                <svg class="fill-current dark:text-gray-100" width="18" height="17" viewBox="0 0 18 17" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M15.9773 0.461304H1.04219C0.466585 0.461304 0 0.790267 0 1.19609C0 1.60192 0.466668 1.93088 1.04219 1.93088H15.9773C16.5529 1.93088 17.0195 1.60192 17.0195 1.19609C17.0195 0.790208 16.5529 0.461304 15.9773 0.461304Z" />
@@ -77,8 +92,8 @@
               <a id="header-cart" href="cart.html"
                 class="flex items-center justify-center w-8 h-8 text-black hover:text:white cart cart-filled">
 
-                <svg class="fill-current" width="29" height="25" viewBox="0 0 29 25" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
+                <svg class="fill-current dark:text-gray-100" width="29" height="25" viewBox="0 0 29 25" fill="none"
+                  xmlns="http://www.w3.org/2000/svg" data-aos="fade-left" data-aos-duration="500">
                   <path
                     d="M10.8754 19.9824C9.61762 19.9824 8.59436 21.023 8.59436 22.3021C8.59436 23.5812 9.61762 24.6218 10.8754 24.6218C12.1331 24.6218 13.1564 23.5812 13.1564 22.3021C13.1563 21.023 12.1331 19.9824 10.8754 19.9824ZM10.8754 23.3265C10.3199 23.3265 9.86796 22.8669 9.86796 22.302C9.86796 21.7371 10.3199 21.2775 10.8754 21.2775C11.4308 21.2775 11.8828 21.7371 11.8828 22.302C11.8828 22.867 11.4308 23.3265 10.8754 23.3265Z" />
                   <path
@@ -89,7 +104,7 @@
                     d="M18.9414 11.1324H10.8089C10.4572 11.1324 10.1721 11.4223 10.1721 11.78C10.1721 12.1377 10.4572 12.4276 10.8089 12.4276H18.9413C19.293 12.4276 19.5781 12.1377 19.5781 11.78C19.5781 11.4224 19.293 11.1324 18.9414 11.1324Z" />
                   <path
                     d="M25.6499 4.88404C25.407 4.58092 25.0472 4.40711 24.6626 4.40711H4.82655L4.42595 2.42947C4.34232 2.01694 4.06563 1.67055 3.68565 1.50276L0.890528 0.268963C0.567841 0.126419 0.192825 0.276999 0.0528584 0.60505C-0.0872597 0.933204 0.0608116 1.31463 0.383347 1.45696L3.17852 2.69081L6.2598 17.9014C6.38117 18.5004 6.90578 18.9352 7.50723 18.9352H22.7635C23.1152 18.9352 23.4003 18.6452 23.4003 18.2876C23.4003 17.9299 23.1152 17.64 22.7635 17.64H7.50728L7.13247 15.7897H22.8814C23.4828 15.7897 24.0075 15.3549 24.1288 14.7559L25.9101 5.96349C25.9876 5.58063 25.8928 5.1871 25.6499 4.88404ZM22.8814 14.4946H6.87012L5.08895 5.70226L24.6626 5.70231L22.8814 14.4946Z"
-                    fill="black" />
+                    class="fill-current dark:text-gray-100" />
                   <g class="text-pink-400">
                     <circle cx="25" cy="4.89023" r="4" class="fill-current dot" />
                   </g>
@@ -104,8 +119,8 @@
   <!-- End Header -->
 
   <!-- Start Breadcrumb -->
-  <section class="bg-gray-100 py-8 px-4">
-    <div class="container mx-auto">
+  <section class="bg-gray-100 py-8 px-4 dark:bg-gray-1000">
+    <div class="container mx-auto" data-aos="fade-down" data-aos-duration="1500">
       <ul class="breadcrumb">
         <li>
           <a href="index.html">Home</a>
@@ -132,10 +147,10 @@
       </div>
       <div class="flex-1">
         <div class="slider">
-          <div class="thumbnail">
+          <div class="thumbnail" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
             <!-- Start Slide Show Thumbnail Item 1 -->
             <div class="px-2">
-              <div class="item" data-img="./images/content/chair1.jpg">
+              <div class="item selected" data-img="./images/content/chair1.jpg">
                 <img src="./images/content/chair1.jpg" alt="Chair Main" class="object-cover w-full h-full rounded-lg">
               </div>
             </div>
@@ -143,7 +158,7 @@
 
             <!-- Start Slide Show Thumbnail Item 2 -->
             <div class="px-2">
-              <div class="item selected" data-img="./images/content/chair2.jpg">
+              <div class="item " data-img="./images/content/chair2.jpg">
                 <img src="./images/content/chair2.jpg" alt="Chair Main" class="object-cover w-full h-full rounded-lg">
               </div>
             </div>
@@ -173,7 +188,7 @@
             </div>
             <!-- Start Slide Show Thumbnail Item 5 -->
           </div>
-          <div class="preview">
+          <div class="preview" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
             <div class="item rounded-lg h-full overflow-hidden">
               <img src="./images/content/chair1.jpg" alt="" class="object-cover w-full h-full rounded-lg">
             </div>
@@ -182,7 +197,7 @@
       </div>
       <div class="flex-1 px-4 md:p-6">
         <div class="hidden md:block">
-          <h2 class="text-5xl font-semibold">
+          <h2 class="text-5xl font-semibold" data-aos="zoom-in">
             Chair Thatty
           </h2>
           <p class="text-xl">
@@ -208,15 +223,15 @@
           Add to Cart
         </a>
         <hr class="my-8">
-        <h6 class="text-xl font-semibold mb-4">
+        <h6 class="text-xl font-semibold mb-4" data-aos="fade-left" data-aos-duration="1500">
           About Product:
         </h6>
-        <p class="text-xl leading-7 mb-6">
+        <p class="text-xl leading-7 mb-6" data-aos="fade-left" data-aos-duration="1500">
           Tailored to a level of perfection synonymous with that
           of a Savile Row suit and with understated quality in the
           detail, Jetty has been influenced by timeless 1950s style.
         </p>
-        <p class="text-xl leading-7 mb-6">
+        <p class="text-xl leading-7 mb-6" data-aos="fade-left" data-aos-duration="1500">
           Providing a subtle nod to the past, Jetty also provides
           a perfect solution for the way we work today.
           A comprehensive product family, Jetty features a variety
@@ -228,7 +243,8 @@
   <!-- End Details -->
 
   <!-- Start Complate Your Room -->
-  <section class="bg-gray-100 px-4 py-16">
+  <section class="bg-gray-100 px-4 py-16 dark:bg-gray-1000" data-aos="fade-down" data-aos-easing="linear"
+    data-aos-duration="1500">
     <div class="container mx:auto">
       <div class="flex flex-start mb-4">
         <h3 class="text-2xl capitalize font-semibold">
@@ -238,16 +254,16 @@
       <div class="flex flex-wrap overflow-x-auto mb-4 -mx-3">
 
         <!-- Start Item 1 -->
-        <div class="px-3 w-full md:w-3/12">
-          <div class="rounded-xl p-4 pb-8 relative bg-white">
+        <div class="px-3 w-full md:w-3/12" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="2000">
+          <div class="rounded-xl p-4 pb-8 relative bg-white ">
             <div class="rounded-xl overflow-hidden card-shadow w-full h-52">
               <img src="./images/content/image-office-1.jpg" alt="Chair"
                 class="w-full h-full object-cover object-center">
             </div>
-            <h5 class="text-lg font-semibold mt-4">
+            <h5 class="text-lg font-semibold mt-4 dark:text-gray-900 ">
               Office Chair
             </h5>
-            <span class="">IDR. 89.300.000</span>
+            <span class="dark:text-gray-900">IDR. 89.300.000</span>
             <a href="details.html" class="stretched-link">
               <!-- Fake Children -->
             </a>
@@ -256,16 +272,16 @@
         <!-- End Item 1 -->
 
         <!-- Start Item 2 -->
-        <div class="px-3 w-full md:w-3/12">
+        <div class="px-3 w-full md:w-3/12" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="2000">
           <div class="rounded-xl p-4 pb-8 relative bg-white">
             <div class="rounded-xl overflow-hidden card-shadow w-full h-52">
               <img src="./images/content/image-office-2.jpg" alt="Chair"
                 class="w-full h-full object-cover object-center">
             </div>
-            <h5 class="text-lg font-semibold mt-4">
+            <h5 class="text-lg font-semibold mt-4 dark:text-gray-900">
               Office Chair
             </h5>
-            <span class="">IDR. 89.300.000</span>
+            <span class="dark:text-gray-900">IDR. 89.300.000</span>
             <a href="details.html" class="stretched-link">
               <!-- Fake Children -->
             </a>
@@ -274,16 +290,16 @@
         <!-- End Item 2 -->
 
         <!-- Start Item 3 -->
-        <div class="px-3 w-full md:w-3/12">
+        <div class="px-3 w-full md:w-3/12" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="2000">
           <div class="rounded-xl p-4 pb-8 relative bg-white">
             <div class="rounded-xl overflow-hidden card-shadow w-full h-52">
               <img src="./images/content/image-office-3.jpg" alt="Chair"
                 class="w-full h-full object-cover object-center">
             </div>
-            <h5 class="text-lg font-semibold mt-4">
+            <h5 class="text-lg font-semibold mt-4 dark:text-gray-900">
               Office Chair
             </h5>
-            <span class="">IDR. 89.300.000</span>
+            <span class="dark:text-gray-900">IDR. 89.300.000</span>
             <a href="details.html" class="stretched-link">
               <!-- Fake Children -->
             </a>
@@ -292,16 +308,16 @@
         <!-- End Item 3 -->
 
         <!-- Start Item 4 -->
-        <div class="px-3 w-full md:w-3/12">
+        <div class="px-3 w-full md:w-3/12" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="2000">
           <div class="rounded-xl p-4 pb-8 relative bg-white">
             <div class="rounded-xl overflow-hidden card-shadow w-full h-52">
               <img src="./images/content/image-office-4.jpg" alt="Chair"
                 class="w-full h-full object-cover object-center">
             </div>
-            <h5 class="text-lg font-semibold mt-4">
+            <h5 class="text-lg font-semibold mt-4 dark:text-gray-900">
               Office Chair
             </h5>
-            <span class="">IDR. 89.300.000</span>
+            <span class="dark:text-gray-900">IDR. 89.300.000</span>
             <a href="details.html" class="stretched-link">
               <!-- Fake Children -->
             </a>
@@ -416,6 +432,7 @@
 
   <!-- End Footer -->
 
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
   <script>
     window.ga = function () {
@@ -429,6 +446,7 @@
     ga("send", "pageview");
   </script>
   <script src="https://www.google-analytics.com/analytics.js" async></script>
+
 
 </body>
 

@@ -1,31 +1,25 @@
 import{addClass, removeClass} from "./utils-class";
 
-const corouselId=document?.getElementById("corousel");
-const corouselItems=corouselId?.getElementsByClassName("flex")[0];
-const corouselContainer=corouselId?.getElementsByClassName("container")[0];
+const carouselId=document?.getElementById("carousel");
+const carouselItems=carouselId?.getElementsByClassName("flex")[0];
+const carouselContainer=carouselId?.getElementsByClassName("container")[0];
 
-function corouselCalculateOffset(){
-    const corouselOffset=corouselContainer.getBoundingClientRect().left;    
-    corouselItems.style.paddingLeft= `${corouselOffset-16}px`;
-    corouselItems.style.paddingRight= `${corouselOffset-16}px`;   
+function carouselCalculateOffset(){
+    console.log("Check Calculate Offset");
+    const carouselOffset=carouselContainer.getBoundingClientRect().left;    
+    carouselItems.style.paddingLeft= `${carouselOffset-16}px`;
+    carouselItems.style.paddingRight= `${carouselOffset-16}px`;   
 }
 
 function slide (wrapper, items){
-    let posX1=0, 
-    posX2 = 0,
-    posInitial,
-    posFinal,
-    threshold = 100,
-    itemToShow = 4,
-    slides=items.getElementsByClassName("card"),
-    slidesLength=slides.length,
-    slideSize=items.getElementsByClassName("card")[0].offsetWidth,
-    index= 0, 
-    allowShift=true;
-
-    wrapper.classList.add("loaded")
-
-    items.onmousedown=dragStart;
+    console.log("Check Slide");
+    let posX1=0, posX2 = 0, posInitial, posFinal, threshold = 100, itemToShow = 4, slides=items.getElementsByClassName("card"),
+    slidesLength = slides.length, slideSize=items.getElementsByClassName("card")[0].offsetWidth,
+    index= 0,  allowShift=true;
+    
+    wrapper.classList.add("loaded");
+    
+    items.onmousedown = dragStart;
     
     items.addEventListener("touchstart",dragStart);
     items.addEventListener("touchend", dragEnd);
@@ -33,27 +27,28 @@ function slide (wrapper, items){
     items.addEventListener("transitionend", checkIndex);
 
     function dragStart (e){
-
-        // Check !
-        e = e || window.event
+        console.log("Check Drag Start");
+        e = e || window.event;
         e.preventDefault()
         posInitial=items.offsetLeft;
 
      if(e.type == "touchstart"){
-         console.log(e.touches);
-         posX1=e.touches[0].clientX;
+        //  console.log(e.touches);
+         posX1= e.touches[0].clientX;
      }
      else {
-         posX1=e.clientX;
+         posX1= e.clientX;
          document.onmouseup = dragEnd;
          document.onmousemove = dragAction;
      }
     } 
 
-    function dragAction(e){
-        e = e || window.event
+    function dragAction(e){ 
+        console.log("Check Drag Action");
+        e = e || window.event;
+
         if(e.type== "touchmove"){
-            console.log(e.touches);
+        
             posX2 = posX1- e.touches[0].clientX;
             posX1 = e.touches[0].clientX;
         }
@@ -61,13 +56,14 @@ function slide (wrapper, items){
             posX2 = posX1-e.clientX;
             posX1 = e.clientX;
         }
-        items.style.left=`{items.offsetLeft-posX2}px`;
+        items.style.left=`${items.offsetLeft-posX2}px`;
     }
 
     function dragEnd(){
+        console.log("Check Drag End");
         posFinal=items.offsetLeft;
         
-        if( posFinal-posInitial<-threshold){
+        if( posFinal-posInitial< -threshold){
             shiftSlide(1,"drag");
         }
         else if (posFinal-posInitial> threshold){
@@ -80,23 +76,26 @@ function slide (wrapper, items){
         document.onmousemove=null;   
     }
 
+
     function shiftSlide(direction, action){
+    console.log("Check Shift Slide");
     addClass(items,"transiton-all duration-200");
     if(allowShift){
     if(!action) posInitial=items.offsetLeft;
-    if(direction==1){
-        items.style.left=`{$posInitial-slideSize}px`;
-        index++
+    if(direction == 1){
+        items.style.left=`${$posInitial-slideSize}px`;
+        index++;
     }
-    else if(direction==-1){
-        items.style.left=`{$posInitial+slideSize}px`;
-        index--
+    else if(direction == -1){
+        items.style.left=`${$posInitial+slideSize}px`;
+        index--;
     }
    }
    allowShift=false;
  }
 
  function checkIndex(){
+    console.log("Check Indek");
     setTimeout(()=>{
     removeClass(items,"transiton-all duration-200");
     },200);
@@ -115,11 +114,10 @@ function slide (wrapper, items){
    }
    allowShift=true;
  }
-
 }
 
-if(corouselId){
-    slide(corouselId,corouselItems);
-    window.addEventListener("load",corouselCalculateOffset);
-    window.addEventListener("resize", corouselCalculateOffset);
+if(carouselId){
+    slide(carouselId,carouselItems);
+    window.addEventListener("load",carouselCalculateOffset);
+    window.addEventListener("resize", carouselCalculateOffset);
 }

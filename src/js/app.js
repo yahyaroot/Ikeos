@@ -7,3 +7,5 @@ import "./accordion";
 import "./slider";
 import "./shoppingCart";
 import "./shippingDetail";
+import "./dark-mode";
+import "./aos";

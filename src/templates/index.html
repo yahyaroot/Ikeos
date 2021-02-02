@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="">
+<html lang="" class="dark">
 
 <head>
   <meta charset="utf-8" />
@@ -21,36 +21,54 @@
   <meta name="theme-color" content="#000" />
 </head>
 
-<body>
+<body class="dark:bg-gray-900 dark:text-gray-100">
 
   <!-- Start Header -->
-  <header class="absolute w-full z-50 px-4">
+  <header class="absolute w-full z-50 px-4 ">
     <div class="container mx-auto py-10">
       <div class="flex flex-stretch items-center">
-        <div class="w-56 flex items-center">
+        <div class="w-56 flex items-center" data-aos="fade-right" data-aos-duration="500">
           <img src="images/design/logo.svg" alt="Logo">
         </div>
         <div class="w-full"></div>
+        <!-- Start Dark Mode -->
+        <div class="flex justify-center items-center space-x-2 md:mr-44 " data-aos="fade-down" data-aos-duration="500">
+          <span class=" text-sm text-gray-800 dark:text-gray-100">Light</span>
+          <input type="checkbox" name="" id="toggle" class="hidden ">
+          <label for="toggle">
+            <div class=" w-9 h-5 flex item-center bg-gray-300 rounded-full p-1 cursor-pointer ">
+              <div class=" toggle-dot w-4 h-3 bg-white rounded-full shadow-md transform duration-200 ease-in-out">
+              </div>
+            </div>
+          </label>
+          <span class="text-sm text-black dark:text-gray-100">Dark</span>
+        </div>
+        <!-- End Dark Mode -->
+
         <!-- Start Menu Humburger Wrapper -->
-        <div class="w-auto">
-          <ul id="menu" class="fixed bg-white inset-0 flex flex-col invisible items-center 
+        <div class="w-auto" data-aos="fade-left" data-aos-duration="1000">
+          <ul id="menu" class="fixed bg-white  inset-0 flex flex-col invisible items-center 
            justify-center opacity-0 md:visible md:flex-row md:bg-transparent 
            md:relative md:opacity-100 ">
 
             <li class="mx-3 py-6 md:py-0">
-              <a href="" class="text-black hover:text-white hover:underline">Showcase</a>
+              <a href=""
+                class="text-black hover:text-white hover:underline  dark:text-gray-100 dark:hover:text-gray-900">Showcase</a>
             </li>
 
             <li class="mx-3 py-6 md:py-0">
-              <a href="" class="text-black hover:text-white hover:underline">Catalog</a>
+              <a href=""
+                class="text-black hover:text-white hover:underline  dark:text-gray-100 dark:hover:text-gray-900">Catalog</a>
             </li>
 
             <li class="mx-3 py-6 md:py-0">
-              <a href="" class="text-black hover:text-white hover:underline">Delivery</a>
+              <a href=""
+                class="text-black hover:text-white hover:underline  dark:text-gray-100 dark:hover:text-gray-900">Delivery</a>
             </li>
 
             <li class="mx-3 py-6 md:py-0">
-              <a href="" class="text-black hover:text-white hover:underline">Rewards</a>
+              <a href=""
+                class="text-black hover:text-white hover:underline  dark:text-gray-100 dark:hover:text-gray-900">Rewards</a>
             </li>
           </ul>
         </div>
@@ -60,9 +78,9 @@
           <ul class="flex items-center">
             <li class="ml-6 block md:hidden">
               <button id="menu-toggler" class="relative flex z-50 items-center 
-              justify-center w-8 h-8 text-black  focus:outline-none">
+              justify-center w-8 h-8 text-black focus:outline-none " data-aos="fade-down" data-aos-duration="500">
 
-                <svg class="fill-current" width="18" height="17" viewBox="0 0 18 17" fill="none"
+                <svg class="fill-current dark:text-gray-100" width="18" height="17" viewBox="0 0 18 17" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M15.9773 0.461304H1.04219C0.466585 0.461304 0 0.790267 0 1.19609C0 1.60192 0.466668 1.93088 1.04219 1.93088H15.9773C16.5529 1.93088 17.0195 1.60192 17.0195 1.19609C17.0195 0.790208 16.5529 0.461304 15.9773 0.461304Z" />
@@ -79,8 +97,8 @@
               <a id="header-cart" href="cart.html"
                 class="flex items-center justify-center w-8 h-8 text-black hover:text:white cart cart-filled">
 
-                <svg class="fill-current" width="29" height="25" viewBox="0 0 29 25" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
+                <svg class="fill-current dark:text-gray-100" width="29" height="25" viewBox="0 0 29 25" fill="none"
+                  xmlns="http://www.w3.org/2000/svg" data-aos="fade-left" data-aos-duration="500">
                   <path
                     d="M10.8754 19.9824C9.61762 19.9824 8.59436 21.023 8.59436 22.3021C8.59436 23.5812 9.61762 24.6218 10.8754 24.6218C12.1331 24.6218 13.1564 23.5812 13.1564 22.3021C13.1563 21.023 12.1331 19.9824 10.8754 19.9824ZM10.8754 23.3265C10.3199 23.3265 9.86796 22.8669 9.86796 22.302C9.86796 21.7371 10.3199 21.2775 10.8754 21.2775C11.4308 21.2775 11.8828 21.7371 11.8828 22.302C11.8828 22.867 11.4308 23.3265 10.8754 23.3265Z" />
                   <path
@@ -91,7 +109,7 @@
                     d="M18.9414 11.1324H10.8089C10.4572 11.1324 10.1721 11.4223 10.1721 11.78C10.1721 12.1377 10.4572 12.4276 10.8089 12.4276H18.9413C19.293 12.4276 19.5781 12.1377 19.5781 11.78C19.5781 11.4224 19.293 11.1324 18.9414 11.1324Z" />
                   <path
                     d="M25.6499 4.88404C25.407 4.58092 25.0472 4.40711 24.6626 4.40711H4.82655L4.42595 2.42947C4.34232 2.01694 4.06563 1.67055 3.68565 1.50276L0.890528 0.268963C0.567841 0.126419 0.192825 0.276999 0.0528584 0.60505C-0.0872597 0.933204 0.0608116 1.31463 0.383347 1.45696L3.17852 2.69081L6.2598 17.9014C6.38117 18.5004 6.90578 18.9352 7.50723 18.9352H22.7635C23.1152 18.9352 23.4003 18.6452 23.4003 18.2876C23.4003 17.9299 23.1152 17.64 22.7635 17.64H7.50728L7.13247 15.7897H22.8814C23.4828 15.7897 24.0075 15.3549 24.1288 14.7559L25.9101 5.96349C25.9876 5.58063 25.8928 5.1871 25.6499 4.88404ZM22.8814 14.4946H6.87012L5.08895 5.70226L24.6626 5.70231L22.8814 14.4946Z"
-                    fill="black" />
+                    class="fill-current dark:text-gray-100" />
                   <g class="text-pink-400">
                     <circle cx="25" cy="4.89023" r="4" class="fill-current dot" />
                   </g>
@@ -110,7 +128,7 @@
     <!-- Start Section Hero Left -->
     <div
       class="w-full absolute z-20 inset-0 md:relative md:w-1/2 flex text-center flex-col justify-center hero-caption">
-      <h1 class="text-3xl md:text-5xl leading-tight font-semibold">
+      <h1 class="text-3xl md:text-5xl leading-tight font-semibold " data-aos="fade-left" data-aos-duration="1000">
         The Room <br class="" /> You Have Dream
       </h1>
       <h2 class="px-8 text-base md:px-0 md:text-lg my-6 tracking-wide">
@@ -119,8 +137,9 @@
         membuat ruangan terasa homey
       </h2>
       <div>
-        <a href="#browse-the-room" class="bg-pink-400 text-black hover:bg-black hover:text-pink-400 
-          rounded-full px-8 py-3 mt-4 inline-block flex-none transiton duration-200">
+        <a href="#browse-the-room"
+          class="bg-pink-400 text-black hover:bg-black hover:text-pink-400 
+          rounded-full px-8 py-3 mt-4 inline-block flex-none transiton duration-200 dark:text-gray-100  dark:hover:bg-red-400">
           Explore Now
         </a>
       </div>
@@ -133,7 +152,7 @@
         <div class="overlay inset-0 bg-black opacity-30 z-10">
         </div>
         <div class="overlay right-0 bottom-0 md:inset-0">
-          <button class="video hero-cta focus:outline-none z-30 modal-trigger" data-content='<div class="w-screen pb-56 md:w-88 relative z-50">
+          <button class="video hero-cta focus:outline-none z-30 modal-trigger dark:bg-gray-900" data-content='<div class="w-screen pb-56 md:w-88 relative z-50">
             <div class="absolute w-full h-full">
               <iframe width="100%" height="100%" src="https://www.youtube.com/embed/WYKUJgMRQ7A" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -151,26 +170,27 @@
   <!-- End Section Hero -->
 
   <!-- Start Browse The Room -->
-  <section class="flex bg-gray-100 py-16 px-4" id="browse-the-room">
+  <section class="flex bg-gray-100 py-16 px-4  dark:bg-gray-1000 dark:text-gray-100" id="browse-the-room">
     <div class="container mx-auto">
       <div class="flex flex-start mb-4">
-        <h3 class="text-2xl capitalize font-semibold">
+        <h3 class="text-2xl capitalize font-semibold" data-aos="fade-down" data-aos-duration="900">
           Browse the room
           <br class="" />that we designed for you
         </h3>
       </div>
       <div class="grid grid-rows-2 grid-cols-9 gap-4">
         <!-- Start item browse the Room 1-->
-        <div class="relative col-span-9 row-span-1 md:col-span-4 card" style="height:180px">
+        <div class="relative col-span-9 row-span-1 md:col-span-4 card" style="height:180px" data-aos="flip-left"
+          data-aos-duration="900">
           <div class="card-shadow rounded-xl">
             <img src="./images/content/image-catalog-1.jpg" alt=""
               class="w-full h-full object-cover overlay overlay-hidden rounded-xl">
           </div>
           <div class="overlay left-0 top-0 bottom-0 flex justify-center flex-col pl-48 md:pl-72">
-            <h5 class="text-lg font-semibold">
+            <h5 class="text-lg font-semibold dark:text-gray-100">
               Living Room
             </h5>
-            <span class="">28.309 items</span>
+            <span class="dark:text-gray-100">28.309 items</span>
           </div>
           <a href="details.html" class="stretched-link">
             <!-- Fake Children -->
@@ -179,17 +199,18 @@
         <!-- End item browse the Room 1-->
 
         <!-- Start item browse the Room 2-->
-        <div class="relative col-span-9 row-span-1 md:col-span-2 md:row-span-2 card">
+        <div class="relative col-span-9 row-span-1 md:col-span-2 md:row-span-2 card" data-aos="fade-left"
+          data-aos-duration="900">
           <div class="card-shadow rounded-xl">
             <img src="./images/content/image-catalog-4.jpg" alt=""
               class="w-full h-full object-cover overlay overlay-hidden rounded-xl">
           </div>
           <div class="overlay inset-0 md:bottom-auto flex 
             justify-center md:items-center flex-col pl-48 md:pl-0 pt-0 md:pt-12">
-            <h5 class="text-lg font-semibold">
+            <h5 class="text-lg font-semibold dark:text-gray-100">
               Decoration
             </h5>
-            <span class="">77.392 items</span>
+            <span class="dark:text-gray-100">77.392 items</span>
           </div>
           <a href="details.html" class="stretched-link">
             <!-- Fake Children -->
@@ -198,17 +219,18 @@
         <!-- End item browse the Room 2-->
 
         <!-- Start item browse the Room 3-->
-        <div class="relative col-span-9 row-span-1 md:col-span-3 md:row-span-2 card">
+        <div class="relative col-span-9 row-span-1 md:col-span-3 md:row-span-2 card" data-aos="fade-left"
+          data-aos-duration="1100">
           <div class="card-shadow rounded-xl">
             <img src="./images/content/image-catalog-3.jpg" alt=""
               class="w-full h-full object-cover overlay overlay-hidden rounded-xl">
           </div>
           <div class="overlay inset-0 md:bottom-auto flex 
           justify-center md:items-center flex-col pl-48 md:pl-0 pt-0 md:pt-12">
-            <h5 class="text-lg font-semibold">
+            <h5 class="text-lg font-semibold dark:text-gray-100">
               Bad Room
             </h5>
-            <span class="">22.309 items</span>
+            <span class="dark:text-gray-100">22.309 items</span>
           </div>
           <a href="details.html" class="stretched-link">
             <!-- Fake Children -->
@@ -216,17 +238,18 @@
         </div>
         <!-- End item browse the Room 3-->
 
+
         <!-- Start item browse the Room 4-->
-        <div class="relative col-span-9 row-span-1 md:col-span-4 card">
+        <div class="relative col-span-9 row-span-1 md:col-span-4 card" data-aos="flip-left" data-aos-duration="900">
           <div class="card-shadow rounded-xl">
             <img src="./images/content/image-catalog-2.jpg" alt=""
               class="w-full h-full object-cover overlay overlay-hidden rounded-xl">
           </div>
           <div class="overlay left-0 top-0 bottom-0 flex justify-center flex-col pl-48 md:pl-72">
-            <h5 class="text-lg font-semibold">
+            <h5 class="text-lg font-semibold dark:text-gray-100">
               Children Room
             </h5>
-            <span class="">807 items</span>
+            <span class="dark:text-gray-100">807 items</span>
           </div>
           <a href="details.html" class="stretched-link">
             <!-- Fake Children -->
@@ -242,19 +265,22 @@
   <section class="flex flex-col py-16">
     <div class="container mx-auto mb-4">
       <div class="flex justify-center text-center mb-4">
-        <h3 class="text-2xl capitalize font-semibold">
+        <h3 class="text-2xl capitalize font-semibold" data-aos="fade-down" data-aos-easing="linear"
+          data-aos-duration="1100">
           Just Arrived <br />
           This Summer For You
         </h3>
       </div>
     </div>
-    <div class="overflow-x-hidden px-4" id="corousel">
+    <div class="overflow-x-hidden px-4" id="carousel">
       <div class="container mx-auto"></div>
 
       <div class="flex -mx-4 flex-row ralative">
+
         <!-- Start Item Carausel 1 -->
         <div class="px-4 relative card">
-          <div class="rounded-xl overflow-hidden card-shadow" style="width: 287px; height: 386px;">
+          <div class="rounded-xl overflow-hidden card-shadow" style="width:207px; height:286px;" data-aos="fade-down"
+            data-aos-easing="linear" data-aos-duration="1100">
             <img src="/images/content/img-corousel-1.jpg" alt="cangkir"
               class="w-full h-full object-cover object-center" />
           </div>
@@ -262,7 +288,7 @@
             Cangkir Mauttie
           </h5>
           <span class=""> IDR 89.300</span>
-          <a href="#details.html" class="stretched-link">
+          <a href="details.html" class="stretched-link">
             <!-- Fake Children -->
           </a>
         </div>
@@ -270,7 +296,8 @@
 
         <!-- Start Item Carausel 2 -->
         <div class="px-4 relative card">
-          <div class="rounded-xl overflow-hidden card-shadow" style="width: 287px; height: 386px;">
+          <div class="rounded-xl overflow-hidden card-shadow" style="width: 207px; height: 286px;" data-aos="fade-down"
+            data-aos-easing="linear" data-aos-duration="1600">
             <img src="/images/content/img-corousel-2.jpg" alt="bankyu"
               class="w-full h-full object-cover object-center" />
           </div>
@@ -278,7 +305,7 @@
             Bankyu Minimax
           </h5>
           <span class=""> IDR 67.000</span>
-          <a href="#details.html" class="stretched-link">
+          <a href="details.html" class="stretched-link">
             <!-- Fake Children -->
           </a>
         </div>
@@ -286,7 +313,8 @@
 
         <!-- Start Item Carausel 3 -->
         <div class="px-4 relative card">
-          <div class="rounded-xl overflow-hidden card-shadow" style="width: 287px; height: 386px;">
+          <div class="rounded-xl overflow-hidden card-shadow" style="width: 207px; height: 286px;" data-aos="fade-down"
+            data-aos-easing="linear" data-aos-duration="1700">
             <img src="/images/content/img-corousel-3.jpg" alt="buku sidu"
               class="w-full h-full object-cover object-center" />
           </div>
@@ -294,7 +322,7 @@
             Buku Sidu Edition
           </h5>
           <span class=""> IDR 12.000.000</span>
-          <a href="#details.html" class="stretched-link">
+          <a href="details.html" class="stretched-link">
             <!-- Fake Children -->
           </a>
         </div>
@@ -302,7 +330,8 @@
 
         <!-- Start Item Carausel 4 -->
         <div class="px-4 relative card">
-          <div class="rounded-xl overflow-hidden card-shadow" style="width: 287px; height: 386px;">
+          <div class="rounded-xl overflow-hidden card-shadow" style="width: 207px; height: 286px;" data-aos="fade-down"
+            data-aos-easing="linear" data-aos-duration="1800">
             <img src="/images/content/img-corousel-4.jpg" alt=" Watch Notes"
               class="w-full h-full object-cover object-center" />
           </div>
@@ -310,7 +339,7 @@
             Watch Notes X
           </h5>
           <span class=""> IDR 73.000.000</span>
-          <a href="#details.html" class="stretched-link">
+          <a href="details.html" class="stretched-link">
             <!-- Fake Children -->
           </a>
         </div>
@@ -318,7 +347,8 @@
 
         <!-- Start Item Carausel 5 -->
         <div class="px-4 relative card">
-          <div class="rounded-xl overflow-hidden card-shadow" style="width: 287px; height: 386px;">
+          <div class="rounded-xl overflow-hidden card-shadow" style="width: 207px; height: 286px;" data-aos="fade-down"
+            data-aos-easing="linear" data-aos-duration="1900">
             <img src="/images/content/img-corousel-5.jpg" alt=" Racking"
               class="w-full h-full object-cover object-center" />
           </div>
@@ -326,7 +356,7 @@
             Racking
           </h5>
           <span class=""> IDR 2.400.000</span>
-          <a href="#details.html" class="stretched-link">
+          <a href="details.html" class="stretched-link">
             <!-- Fake Children -->
           </a>
         </div>
@@ -334,7 +364,8 @@
 
         <!-- Start Item Carausel 3 -->
         <div class="px-4 relative card">
-          <div class="rounded-xl overflow-hidden card-shadow" style="width: 287px; height: 386px;">
+          <div class="rounded-xl overflow-hidden card-shadow" style="width: 207px; height: 286px;" data-aos="fade-down"
+            data-aos-easing="linear" data-aos-duration="2000">
             <img src="/images/content/img-corousel-3.jpg" alt="buku sidu"
               class="w-full h-full object-cover object-center" />
           </div>
@@ -342,7 +373,7 @@
             Buku Sidu Edition
           </h5>
           <span class=""> IDR 12.000.000</span>
-          <a href="#details.html" class="stretched-link">
+          <a href="details.html" class="stretched-link">
             <!-- Fake Children -->
           </a>
         </div>
@@ -357,19 +388,23 @@
   <section class="container mx-auto py-8">
     <div class="flex justify-center flex-wrap">
 
-      <div class="w-full flex-auto md:w-auto md:flex-initial px-4 md:px-6 my-4 md:my-5">
+      <div class="w-full flex-auto md:w-auto md:flex-initial px-4 md:px-6 my-4 md:my-5" data-aos="fade-up"
+        data-aos-anchor-placement="center-center">
         <img src="./images/content/logo-adobe.png" alt="Logo Adobe" class="mx-auto">
       </div>
 
-      <div class="w-full flex-auto md:w-auto md:flex-initial px-4 md:px-6 my-4 md:my-5">
+      <div class="w-full flex-auto md:w-auto md:flex-initial px-4 md:px-6 my-4 md:my-5" data-aos="fade-down"
+        data-aos-anchor-placement="center-center">
         <img src="./images/content/logo-ikea.png" alt="Logo Ikea" class="mx-auto">
       </div>
 
-      <div class="w-full flex-auto md:w-auto md:flex-initial px-4 md:px-6 my-4 md:my-5">
+      <div class="w-full flex-auto md:w-auto md:flex-initial px-4 md:px-6 my-4 md:my-5" data-aos="fade-up"
+        data-aos-anchor-placement="center-center">
         <img src="./images/content/logo-hermanmiller.png" alt="Logo Herman Miller" class="mx-auto">
       </div>
 
-      <div class="w-full flex-auto md:w-auto md:flex-initial px-4 md:px-6 my-4 md:my-5">
+      <div class="w-full flex-auto md:w-auto md:flex-initial px-4 md:px-6 my-4 md:my-5" data-aos="fade-down"
+        data-aos-anchor-placement="center-center">
         <img src="./images/content/logo-miele.png" alt="Logo Miele" class="mx-auto">
       </div>
 
@@ -478,7 +513,7 @@
   </footer>
 
   <!-- End Footer -->
-
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
   <script>
     window.ga = function () {
